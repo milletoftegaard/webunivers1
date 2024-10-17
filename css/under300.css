@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-top: 60px; /* Adjust this based on the height of your header */
+}
+
+@font-face {
+    font-family:myfont ;
+    src: url(against.ttf)
+}  
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+   
+}
+
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+}
+
+.scroll-image-section {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+}
+
+.scroll-images img {
+    width: 500px;
+    height: 650px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block; /* Keep images in one line */
+}
+
+.scroll-image-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-image-section::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.scroll-image-section::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.centered-title {
+    text-align: center;    /* Centers the text */
+    font-size: 36px;      /* Sets the font size */
+    color: #333;          /* Sets the text color */
+    margin: 20px 0;       /* Adds vertical spacing above and below the title */
+}
+body {
+    height: 100vh; /* Make body take full height */
+}
+
+.full-screen-image {
+    width: 100vw; /* Full width */
+    height: calc(100vh-60px); /* Full height */
+    object-fit: cover; /* Scale the image to cover the area */
+}
+
+/* Styling af logo */
+.logo-container {
+    text-align: center;      /* Centrer logoet */
+    padding: 20px 0;         /* Tilføj plads over og under logoet */
+}
+
+.logo-img {
+    width: 150px;            /* Juster logoets bredde */
+    height: auto;            /* Bevar billedets forhold */
+}
+
+.spacer {
+    height: 100px; /* Adjust height for spacing between navbar and image */
+}
+
+/* Style the image with a minimalist touch */
+.minimal-image {
+    height: 200px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    
+  }
+ 
+  /* Style the image */
+.minimal-images {
+    height: 200px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    
+    /* Light grey border with minimal thickness */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 2px solid #d3d3d3; /* Light grey thin border */
+    
+    /* Subtle drop shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft, barely visible shadow */
+    
+    /* Transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for the image */
+  .minimal-images:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow on hover */
+  }
+
+  /* Style each image */
+.minimal-images {
+    height: 350px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    
+    /* Light grey border with minimal thickness */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 2px solid #d3d3d3; /* Light grey thin border */
+    
+    /* Subtle drop shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft, barely visible shadow */
+    
+    /* Transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for the image */
+  .minimal-images:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow on hover */
+  }
+
+  .content {
+    max-width: 1500px; /* Maksimal bredde for teksten */
+    background-color: #ffffff; /* Hvid baggrund for teksten */
+    padding: 20px; /* Polstring omkring indholdet */
+    border-radius: 8px; /* Let afrundede hjørner */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Blød skygge */
+  }
+  
+  /* Styling til overskriften */
+  h1 {
+    font-size: 2rem; /* Størrelse på overskriften */
+    color: #333; /* Mørk grå farve til overskriften */
+    margin-bottom: 10px; /* Afstand under overskriften */
+  }
+  
+  /* Styling til brødteksten */
+  p {
+    font-size: 1rem; /* Størrelse på brødteksten */
+    line-height: 1.6; /* Linjeafstand for bedre læsbarhed */
+    color: #666; /* Lysere grå farve til teksten */
+    text-align: left;
+  }
+
+  li {
+    padding: 10x;
+    text-align: left;
+  }
+
+  /* Style the image with a minimalist touch */
+.minimal-image {
+    height: 200px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    padding-left: 50px;
+  }
+  
+  p {
+    font-family: 'Georgia', serif; /* Klassisk og meget læsevenlig skrifttype */
+    font-size: 1.1rem; /* Lidt større skriftstørrelse for bedre læsbarhed */
+    font-weight: 300; /* Let vægt for en blødere læseoplevelse */
+    color: #444; /* Mørkegrå for blød kontrast mod lys baggrund */
+    line-height: 1.8; /* Giver rigelig luft mellem linjerne */
+    max-width: 1300px; /* Begræns bredden for bedre læsekomfort */
+    margin-bottom: 20px; /* Giver nok luft mellem afsnit */
+    padding: 0; /* Ingen ekstra padding, ren og enkel */
+    word-spacing: 0.05em; /* Lidt ekstra luft mellem ord for en mere luftig følelse */
+    text-align: center;
+    padding-left: 100px;
+    padding-bottom: 20px
+}
+
+.undertekst {
+    font-family: 'Georgia', serif; /* Klassisk og meget læsevenlig skrifttype */
+  font-size: 1.5rem; /* Lidt større skriftstørrelse for bedre læsbarhed */
+  font-weight: 300; /* Let vægt for en blødere læseoplevelse */
+  color: #444; /* Mørkegrå for blød kontrast mod lys baggrund */
+  line-height: 1.8; /* Giver rigelig luft mellem linjerne */
+  max-width: 1300px; /* Begræns bredden for bedre læsekomfort */
+  margin-bottom: 20px; /* Giver nok luft mellem afsnit */
+  padding: 0; /* Ingen ekstra padding, ren og enkel */
+  word-spacing: 0.05em; /* Lidt ekstra luft mellem ord for en mere luftig følelse */
+  text-align: left;
+  padding-left: 100px
+}

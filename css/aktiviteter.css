@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-top: 60px; /* Adjust this based on the height of your header */
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+   
+}
+
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+}
+
+/* Styling af logo */
+.logo-container {
+    text-align: center;      /* Centrer logoet */
+    padding: 20px 0;         /* Tilføj plads over og under logoet */
+}
+
+.logo-img {
+    width: 150px;            /* Juster logoets bredde */
+    height: auto;            /* Bevar billedets forhold */
+}
+
+.spacer {
+    height: 100px; /* Adjust height for spacing between navbar and image */
+}
+
+
+.flex-container { 
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(214, 228, 224);
+
+  }
+  .flex-item { 
+    margin-right:25px;
+    height: 20px; 
+}
+  ul {list-style-type:none; }
+  a { text-decoration:none }
+
+
+/* Style the image with a minimalist touch */
+.minimal-image {
+    height: 200px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    
+  }
+ 
+  /* Style the image */
+.minimal-images {
+    height: 200px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    
+    /* Light grey border with minimal thickness */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 2px solid #d3d3d3; /* Light grey thin border */
+    
+    /* Subtle drop shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft, barely visible shadow */
+    
+    /* Transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for the image */
+  .minimal-images:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow on hover */
+  }
+
+  /* Style each image */
+.minimal-images {
+    height: 600px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    
+    /* Light grey border with minimal thickness */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 2px solid #d3d3d3; /* Light grey thin border */
+    
+    /* Subtle drop shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft, barely visible shadow */
+    
+    /* Transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for the image */
+  .minimal-images:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow on hover */
+  }
+
+  .content {
+    max-width: 1500px; /* Maksimal bredde for teksten */
+    background-color: #ffffff; /* Hvid baggrund for teksten */
+    padding: 20px; /* Polstring omkring indholdet */
+    border-radius: 8px; /* Let afrundede hjørner */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Blød skygge */
+  }
+  
+  /* Styling til overskriften */
+  h1 {
+    font-size: 2rem; /* Størrelse på overskriften */
+    color: #333; /* Mørk grå farve til overskriften */
+    margin-bottom: 10px; /* Afstand under overskriften */
+  }
+  
+  /* Styling til brødteksten */
+  p {
+    font-size: 1rem; /* Størrelse på brødteksten */
+    line-height: 1.6; /* Linjeafstand for bedre læsbarhed */
+    color: #666; /* Lysere grå farve til teksten */
+  }

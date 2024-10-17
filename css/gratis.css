@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-top: 60px; /* Adjust this based on the height of your header */
+}
+
+@font-face {
+    font-family:myfont ;
+    src: url(against.ttf)
+}  
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+   
+}
+
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+}
+
+/* Styling af logo */
+.logo-container {
+    text-align: center;      /* Centrer logoet */
+    padding: 20px 0;         /* Tilføj plads over og under logoet */
+}
+
+.logo-img {
+    width: 150px;            /* Juster logoets bredde */
+    height: auto;            /* Bevar billedets forhold */
+}
+
+
+  /* Style each image */
+.minimal-images {
+    height: 429px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    
+    /* Light grey border with minimal thickness */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 2px solid #d3d3d3; /* Light grey thin border */
+    
+    /* Subtle drop shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft, barely visible shadow */
+    
+    /* Transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for the image */
+  .minimal-images:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow on hover */
+  }
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Klassisk og enkel skrifttype */
+    font-size: 3rem; /* Stor, men ikke overvældende */
+    font-weight: 400; /* Let vægt for et elegant udseende */
+    color: #333; /* Mørkegrå i stedet for sort for blødere kontrast */
+    text-align: center; /* Venstrejusteret for naturlig læserflow */
+    margin-bottom: 20px; /* Giver lidt luft under overskriften */
+    letter-spacing: 1px; /* Skaber åbenhed mellem bogstaverne */
+    line-height: 1.2; /* Stram linjeafstand for et kompakt look */
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+p {
+    font-family: 'Georgia', serif; /* Klassisk og meget læsevenlig skrifttype */
+    font-size: 1.1rem; /* Lidt større skriftstørrelse for bedre læsbarhed */
+    font-weight: 300; /* Let vægt for en blødere læseoplevelse */
+    color: #444; /* Mørkegrå for blød kontrast mod lys baggrund */
+    line-height: 1.8; /* Giver rigelig luft mellem linjerne */
+    max-width: 1300px; /* Begræns bredden for bedre læsekomfort */
+    margin-bottom: 20px; /* Giver nok luft mellem afsnit */
+    padding: 0; /* Ingen ekstra padding, ren og enkel */
+    word-spacing: 0.05em; /* Lidt ekstra luft mellem ord for en mere luftig følelse */
+    text-align: center;
+    padding-left: 100px;
+    padding-bottom: 20px
+}
+
+.undertekst {
+      font-family: 'Georgia', serif; /* Klassisk og meget læsevenlig skrifttype */
+    font-size: 1.5rem; /* Lidt større skriftstørrelse for bedre læsbarhed */
+    font-weight: 300; /* Let vægt for en blødere læseoplevelse */
+    color: #444; /* Mørkegrå for blød kontrast mod lys baggrund */
+    line-height: 1.8; /* Giver rigelig luft mellem linjerne */
+    max-width: 1300px; /* Begræns bredden for bedre læsekomfort */
+    margin-bottom: 20px; /* Giver nok luft mellem afsnit */
+    padding: 0; /* Ingen ekstra padding, ren og enkel */
+    word-spacing: 0.05em; /* Lidt ekstra luft mellem ord for en mere luftig følelse */
+    text-align: left;
+    padding-left: 100px
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Klassisk og enkel skrifttype */
+    font-size: 2rem; /* Stor, men ikke overvældende */
+    font-weight: 400; /* Let vægt for et elegant udseende */
+    color: #333; /* Mørkegrå i stedet for sort for blødere kontrast */
+    text-align: left; /* Venstrejusteret for naturlig læserflow */
+    margin-bottom: 20px; /* Giver lidt luft under overskriften */
+    letter-spacing: 1px; /* Skaber åbenhed mellem bogstaverne */
+    line-height: 1.2; /* Stram linjeafstand for et kompakt look */
+    padding-left: 100px;
+    padding-top: 30px;  
+}
+
+/* Style the image with a minimalist touch */
+.minimal-image {
+    height: 200px; /* Set image height */
+    width: auto; /* Maintain aspect ratio */
+    padding-left: 40px;
+    
+  }
+
+  .under {
+    font-family: 'Georgia', serif; /* Klassisk og meget læsevenlig skrifttype */
+    font-size: 0,5rem; /* Lidt større skriftstørrelse for bedre læsbarhed */
+    font-weight: 300; /* Let vægt for en blødere læseoplevelse */
+    color: #444; /* Mørkegrå for blød kontrast mod lys baggrund */
+    line-height: 1.8; /* Giver rigelig luft mellem linjerne */
+    max-width: 1300px; /* Begræns bredden for bedre læsekomfort */
+    margin-bottom: 20px; /* Giver nok luft mellem afsnit */
+    padding: 0; /* Ingen ekstra padding, ren og enkel */
+    word-spacing: 0.05em; /* Lidt ekstra luft mellem ord for en mere luftig følelse */
+    text-align: left;
+    padding-left: 50px
+  }
